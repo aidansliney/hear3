@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">The Hearing Aid App</string>
+    <string name="welcome">Cut the noise, hear the world</string>
+    <string name="large_text">   </string>
+    <string name="action_settings">Send us some feedback</string>
+    <string name="rate_settings">Rate this app</string>
+    <string name="info_settings">More Information on Crystal Clear</string>
+
+    <string name="seeAudio"> Displaying the audio</string>
+    <string name="seeAudioBlocked">Displaying the audio that is blocked</string>
+
+    <string name="seekbar_0">Remove no background noise</string>
+    <string name="seekbar_100">Remove all background noise</string>
+</resources>

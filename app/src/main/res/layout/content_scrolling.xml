@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.hear2.aidansliney.hear2.ScrollingActivity"
+    tools:showIn="@layout/activity_scrolling">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/text_margin"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:text="Noise Reduction"
+            android:textColor="@color/colorAccent"/>
+
+        <SeekBar
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:paddingTop="2dp"
+            android:progress="75" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/seekbar_0"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:text="0%"
+                android:gravity="left"
+                android:textColor="@color/colorAccent"/>
+            <TextView
+                android:id="@+id/seekbar_100"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="100%"
+                android:textColor="@color/colorAccent"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorLightGrey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/seeAudio" />
+
+
+            <com.cleveroad.audiovisualization.GLAudioVisualizationView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/visualizer_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:av_bubblesSize="20dp"
+                app:av_bubblesRandomizeSizes="true"
+                app:av_wavesHeight="60dp"
+                app:av_wavesFooterHeight="110dp"
+                app:av_wavesCount="7"
+                app:av_layersCount="4"
+                app:av_backgroundColor="@color/av_color_bg"
+                app:av_bubblesPerLayer="16"
+                />
+            <TextView
+                android:id="@+id/myImageViewText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/visualizer_view"
+                android:layout_alignTop="@id/visualizer_view"
+                android:layout_alignRight="@id/visualizer_view"
+                android:layout_alignBottom="@id/visualizer_view"
+                android:layout_margin="6dp"
+                android:text="CLEAN AUDIO"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorLightGrey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/seeAudio" />
+
+
+            <com.cleveroad.audiovisualization.GLAudioVisualizationView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/visualizer_view2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:av_bubblesSize="20dp"
+                app:av_bubblesRandomizeSizes="true"
+                app:av_wavesHeight="60dp"
+                app:av_wavesFooterHeight="110dp"
+                app:av_wavesCount="7"
+                app:av_layersCount="4"
+                app:av_backgroundColor="@color/av_color_bg"
+                app:av_bubblesPerLayer="16"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/visualizer_view2"
+                android:layout_alignTop="@id/visualizer_view2"
+                android:layout_alignRight="@id/visualizer_view2"
+                android:layout_alignBottom="@id/visualizer_view2"
+                android:layout_margin="6dp"
+                android:text="BLOCKED AUDIO"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="#88ccf4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:layout_marginTop="1dp"
+                android:text="@string/welcome"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</android.support.v4.widget.NestedScrollView>
