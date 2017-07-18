@@ -10,29 +10,79 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
-        android:fitsSystemWindows="true"
+        android:layout_height="wrap_content"
+
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/toolbar_layout"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:clipChildren="true"
-            android:fitsSystemWindows="false"
+
+
             android:nestedScrollingEnabled="false"
             app:contentScrim="@color/colorAccent"
             app:expandedTitleMarginStart="12dp"
-            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:expandedTitleMarginBottom="6dp"
+            app:expandedTitleTextAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/game2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/background" />
+
+                <ImageView
+                    android:id="@+id/boat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/boat" />
+
+
+                <ImageView
+                    android:id="@+id/balloon"
+                    android:layout_width="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/balloon" />
+
+                <ImageView
+                    android:id="@+id/cloud"
+                    android:layout_width="90dp"
+                    android:layout_margin="50dp"
+                    android:layout_marginLeft="430dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cloud" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/noisyScene"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
             <ImageView
-                android:id="@+id/game"
+                android:id="@+id/backgroundNoisy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
-                android:src="@drawable/background" />
+                android:src="@drawable/background_noisy" />
+
+            </RelativeLayout>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -40,6 +90,9 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
